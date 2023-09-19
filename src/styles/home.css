@@ -1,0 +1,133 @@
+.feature__item{
+    margin-top: 5rem;
+}
+.feature__subtitle, .feature__title span{
+    color: #df2020;
+}
+.feature__text, .feature__item p{
+    color: #777;
+}
+
+.food__category{
+    background: #df2020;
+    text-align: center;
+    margin-top: 30px;
+    padding: 20px 0;
+    border-radius: 8px;
+}
+.food__category button{
+    border: none;
+    outline: none;
+    padding: 7px 20px;
+    background: transparent;
+    color: #fff;
+}
+.food__category button img{
+    width: 15px;
+}
+.foodBtnActive{
+    background: #fff !important;
+    border-radius: 5px;
+    color: #df2020 !important;
+}
+.tasty-treat__img img{
+    width: 100%;
+}
+.tasty-treat__title span{
+    color: #df2020;
+}
+.tasty-treat__desc{
+    color: #777;
+    line-height: 28px;
+}
+.choose-us__title{
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.choose-us__title i{
+    font-weight: 500 !important;
+    color: #df2020;
+}
+.choose-us__desc{
+    color: #777777;
+}
+.testimonial__subtitle, .testimonial__title span{
+    color: #df2020;
+}
+.testimonial__desc{
+    color: #777777;
+}
+.testimonial__img img{
+    width: 100%;
+    object-fit: cover;
+}
+
+@media only screen and (max-width: 991px) {
+    .testimonial__img-container{
+        display: flex;
+        align-items: center;
+    }
+    .feature__item h5{
+        font-size: 0.9rem;
+    }
+    .feature__item p{
+        font-size: 0.8rem;
+        margin-bottom: 0;
+    }
+    .feature__item{
+        margin-top: 2rem;
+    }
+    .tasty-treat__desc{
+        font-size: 0.9rem;
+        margin-bottom: 0;
+    }
+    .choose-us__desc{
+        font-size: 0.8rem;
+        line-height: 25px;
+    }
+    .tasty-treat__img{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .testimonial__subtitle{
+        font-size: 1rem;
+    }
+    .testimonial__desc{
+        font-size: 0.9rem;
+        line-height: 30px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .testimonial__img {
+        margin-top: 50px;
+    }
+    .feature__subtitle {
+        font-size: 1rem;
+    }
+    .feature__text {
+        font-size: 0.8rem;
+    }
+    .food__category {
+        padding: 15px;
+    }
+    .food__category button {
+        padding: 5px 15px;
+        font-size: 0.8rem;
+    }
+    .tasty-treat__img img{
+        width: 80%;
+    }
+    .why__tasty-treat{
+        padding-top: 0 !important;
+    }
+    .testimonial__img{
+        display: flex;
+        justify-content: center;
+    }
+    .testimonial__img img{
+        width: 80%;
+    }
+
+}
