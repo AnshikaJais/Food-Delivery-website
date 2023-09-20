@@ -1,13 +1,23 @@
 import React from 'react';
 import {Link} from "react-router-dom";
 import "../../styles/product-card.css"
+import {cartActions} from "../../store/shopping-cart/cartSlice.js";
+import {useDispatch} from "react-redux";
+
 
 const ProductCard = ({product}) => {
-    const {id, title, image01: productImg, price} = product;
+    const dispatch = useDispatch();
+
+    const {id, title, image01, price} = product;
+    const addToCart = () => {
+        dispatch(cartActions.addItem({
+            id, title, image01, price
+        }))
+    }
     return (
         <div className="product__item">
             <figure className="product__img">
-                <img src={productImg} alt="product-image" className="w-50"/>
+                <img src={image01} alt="product-image" className="w-50"/>
             </figure>
             <div className="product__content">
                 <h5>
@@ -15,7 +25,7 @@ const ProductCard = ({product}) => {
                 </h5>
                 <div>
                     <p className="product__price">${Number(price).toFixed(2)}</p>
-                    <button className="addToCart__btn">Add to Cart</button>
+                    <button className="addToCart__btn" onClick={addToCart}>Add to Cart</button>
                 </div>
             </div>
 

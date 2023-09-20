@@ -1,8 +1,10 @@
 import React, {useEffect, useRef} from 'react';
 import {Container} from "reactstrap";
 import logo from "../../assets/images/res-logo.png"
-import {Link, NavLink} from "react-router-dom";
+import {cartUIActions} from "../../store/shopping-cart/cartUISlice.js"
 import "../../styles/header.css"
+import {useSelector, useDispatch} from "react-redux";
+import {Link, NavLink} from "react-router-dom";
 
 const nav_links = [
     {
@@ -21,9 +23,14 @@ const nav_links = [
 
 ]
 const Header = () => {
+    const dispatch = useDispatch();
     const menuRef = useRef(null);
     const headerRef = useRef(null);
+    const totalQuantity = useSelector(state => state.cart.totalQuantity);
+
     const toggleMenu = () => menuRef.current.classList.toggle('show__menu');
+    const toggleCart = () => dispatch(cartUIActions.toggle());
+
 
     useEffect(()=>{
         const headerSticky = () => {
@@ -60,9 +67,9 @@ const Header = () => {
 
                     {/*  nav right icon  */}
                     <div className="nav__right d-flex align-items-center gap-4">
-                        <span className="cart__icon">
+                        <span className="cart__icon" onClick={toggleCart }>
                             <i className="ri-shopping-basket-line"></i>
-                            <span className="cart__badge">10</span>
+                            <span className="cart__badge">{isNaN(totalQuantity) ? 0 : totalQuantity}</span>
                         </span>
                         <span className="user">
                             <Link to={"/login"} ><i className="ri-user-line"></i></Link>
