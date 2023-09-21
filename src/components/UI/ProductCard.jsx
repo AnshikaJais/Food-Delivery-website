@@ -1,9 +1,9 @@
 import React from 'react';
 import {Link} from "react-router-dom";
-import "../../styles/product-card.css"
 import {cartActions} from "../../store/shopping-cart/cartSlice.js";
 import {useDispatch} from "react-redux";
 
+import "../../styles/product-card.css"
 
 const ProductCard = ({product}) => {
     const dispatch = useDispatch();
@@ -21,7 +21,7 @@ const ProductCard = ({product}) => {
             </figure>
             <div className="product__content">
                 <h5>
-                    <Link to={`/foods/:${id}`}>{title}</Link>
+                    <Link to={`/foods/${id}`}>{title}</Link>
                 </h5>
                 <div>
                     <p className="product__price">${Number(price).toFixed(2)}</p>

@@ -6,19 +6,19 @@
 
 .footer__logo img{
     width: calc(100% - 80%);
-    margin-bottom: 15px;
+    margin-top: 0;
 }
 
 .footer__logo h5{
     font-weight: 600;
     font-size: 1rem;
-    margin-bottom: 15px;
+    margin: 10px 0 ;
 }
 
 .footer__logo p{
     font-size: 0.9rem;
     color: #333;
-    line-height: 28px;
+    line-height: 25px;
 }
 
 .footer__title{
