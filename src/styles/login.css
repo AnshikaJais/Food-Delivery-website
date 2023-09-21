@@ -1,0 +1,15 @@
+.form{
+    width: 60%;
+    margin: auto;
+    background-color: #fde4e4;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 3rem;
+}
+
+.register__btn {
+    text-decoration: none;
+    padding-bottom: 1px;
+    border-bottom: 1px solid #212245;
+    color: #212245;
+}

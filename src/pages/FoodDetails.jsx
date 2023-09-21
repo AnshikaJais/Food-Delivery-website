@@ -104,7 +104,7 @@ const FoodDetails = () => {
                                             <div className="feedback__text">Great work</div>
 
                                         </div>
-                                        <form action="form" onSubmit={submitHandler}>
+                                        <form  className="review__form" onSubmit={submitHandler}>
                                             <div className="form__group">
                                                 <input
                                                     type="text"

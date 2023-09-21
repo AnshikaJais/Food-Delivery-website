@@ -1,0 +1,42 @@
+th{
+    text-align: center;
+}
+.cart__img-box{
+    width: 80px;
+}
+.cart__img-box img{
+    width: 100%;
+}
+.cart__item-del i{
+    cursor: pointer;
+}
+.cart__page-btn{
+    display: flex;
+    column-gap: 1.5rem;
+}
+.cart__page-btn button a{
+    text-decoration: none;
+    color: #fff;
+}
+.cart__subtotal span{
+    color: #df2020;
+    font-size: 1.5rem;
+}
+
+@media only screen and (max-width: 768px){
+    .cart__img-box{
+        width: 50px;
+    }
+    th, td{
+        font-size: 0.8rem;
+    }
+    .cart__subtotal{
+        font-size: 0.8rem;
+    }
+    .cart__desc{
+        font-size: 0.8rem;
+    }
+    .cart__subtotal span{
+        font-size: 1.2rem;
+    }
+}
